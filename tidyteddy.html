@@ -26,7 +26,7 @@
 
         /* Navigation */
         nav {
-            padding: 20px 0;
+            padding: 24px 0;
             border-bottom: 1px solid #f1f5f9;
             position: sticky;
             top: 0;
@@ -53,7 +53,7 @@
 
         .nav-links {
             display: flex;
-            gap: 28px;
+            gap: 32px;
             list-style: none;
         }
 
@@ -61,7 +61,6 @@
             text-decoration: none;
             color: #475569;
             font-weight: 500;
-            font-size: 15px;
             transition: color 0.2s;
         }
 
@@ -71,17 +70,16 @@
 
         /* Hero */
         .hero {
-            padding: 72px 0 64px;
+            padding: 80px 0;
             text-align: center;
             background: linear-gradient(180deg, #f0f8ff 0%, #ffffff 100%);
         }
 
         .hero h1 {
-            font-size: 44px;
+            font-size: 48px;
             font-weight: 700;
             margin-bottom: 16px;
             color: #1f2937;
-            line-height: 1.2;
         }
 
         .hero h1 span {
@@ -89,9 +87,9 @@
         }
 
         .hero p {
-            font-size: 19px;
+            font-size: 20px;
             color: #64748b;
-            max-width: 640px;
+            max-width: 650px;
             margin: 0 auto 32px;
         }
 
@@ -103,7 +101,6 @@
             text-decoration: none;
             border-radius: 8px;
             font-weight: 600;
-            font-size: 16px;
             transition: background 0.2s;
         }
 
@@ -111,20 +108,19 @@
             background: #5aa8d9;
         }
 
-        /* Sections */
         section {
-            padding: 64px 0;
+            padding: 72px 0;
         }
 
         .section-title {
             text-align: center;
-            font-size: 30px;
+            font-size: 32px;
             font-weight: 700;
             margin-bottom: 48px;
             color: #1f2937;
         }
 
-        /* Services */
+        /* Service Cards */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -145,7 +141,7 @@
         }
 
         .service-card h3 {
-            font-size: 19px;
+            font-size: 20px;
             margin-bottom: 12px;
             color: #1f2937;
         }
@@ -155,19 +151,19 @@
             font-size: 15px;
         }
 
-        /* Why Us */
+        /* Why Partner */
         .why-section {
             background: #f8fafc;
         }
 
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 32px;
         }
 
         .benefit-item h4 {
-            font-size: 17px;
+            font-size: 18px;
             margin-bottom: 8px;
             color: #1f2937;
         }
@@ -188,13 +184,12 @@
             background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 12px;
-            padding: 40px 32px;
+            padding: 40px;
         }
 
         .contact-item {
             margin-bottom: 20px;
-            font-size: 17px;
-            color: #1f2937;
+            font-size: 18px;
         }
 
         .contact-item:last-child {
@@ -211,73 +206,40 @@
             text-decoration: underline;
         }
 
-        .contact-label {
-            font-weight: 600;
-        }
-
-        /* Footer */
         footer {
-            padding: 28px 0;
+            padding: 32px 0;
             border-top: 1px solid #f1f5f9;
             text-align: center;
             color: #94a3b8;
             font-size: 14px;
         }
 
-        /* Mobile */
+        /* Mobile responsive */
         @media (max-width: 768px) {
-            .hero {
-                padding: 48px 0 40px;
+            .nav-wrapper {
+                flex-direction: column;
+                gap: 16px;
             }
-
-            .hero h1 {
-                font-size: 32px;
-            }
-
-            .hero p {
-                font-size: 17px;
-            }
-
             .nav-links {
                 gap: 16px;
                 font-size: 14px;
             }
-
-            .nav-links a {
-                font-size: 14px;
+            .hero h1 {
+                font-size: 36px;
             }
-
+            .hero p {
+                font-size: 18px;
+            }
             section {
-                padding: 48px 0;
+                padding: 56px 0;
             }
-
             .section-title {
-                font-size: 26px;
-                margin-bottom: 32px;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .benefits-grid {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
-
-            .contact-info {
-                padding: 32px 20px;
-            }
-
-            .contact-item {
-                font-size: 16px;
+                font-size: 28px;
             }
         }
     </style>
 </head>
 <body>
-
-    <!-- Navigation -->
     <nav>
         <div class="container nav-wrapper">
             <div class="logo">Tidy<span>Teddy</span></div>
@@ -289,89 +251,91 @@
         </div>
     </nav>
 
-    <!-- Hero -->
     <section class="hero">
         <div class="container">
             <h1>Tidy <span>Teddy</span> Cleaning</h1>
-            <p>Sydney's trusted cleaning partner for real estate agents, property managers and commercial partners. Reliable, on-time and professional results every time.</p>
+            <p>Established in 2020 — with 6 years of industry experience, we are Sydney's trusted cleaning partner for real estate agents, property managers and commercial partners. Reliable, on-time and professional results every time.</p>
             <a href="#contact" class="btn">Get a Quote Today</a>
         </div>
     </section>
 
-    <!-- Services -->
     <section id="services">
         <div class="container">
             <h2 class="section-title">Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <h3>Bond Cleaning</h3>
-                    <p>Comprehensive end-of-lease cleaning designed to meet real estate standards and help your tenants get their full bond back.</p>
+                    <p>Comprehensive end‑of‑lease cleaning designed to meet real estate standards and help tenants secure their full bond refund.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Pre-Sale Cleaning</h3>
-                    <p>Premium property presentation cleaning to maximise appeal and value for vendors ahead of inspections and auctions.</p>
+                    <h3>Pre‑Sale Cleaning</h3>
+                    <p>Premium property presentation cleaning to boost appeal and maximise value before inspections and auctions.</p>
                 </div>
                 <div class="service-card">
                     <h3>Builder's Cleaning</h3>
-                    <p>Post-renovation and construction cleaning to remove dust, paint, debris and leave the property move-in ready.</p>
+                    <p>Post‑renovation and construction cleaning to remove dust, paint splatters and debris for a move‑in ready finish.</p>
                 </div>
                 <div class="service-card">
                     <h3>Regular Cleaning</h3>
-                    <p>Flexible ongoing cleaning schedules for rental properties, offices and commercial spaces across Sydney.</p>
+                    <p>Flexible ongoing cleaning for rental homes, offices and commercial premises across greater Sydney.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Us -->
     <section id="why-us" class="why-section">
         <div class="container">
             <h2 class="section-title">Why Partner With Us</h2>
             <div class="benefits-grid">
                 <div class="benefit-item">
-                    <h4>Agent-Focused Service</h4>
-                    <p>We understand real estate timelines and priorities, with clear communication and fast turnaround for bookings.</p>
+                    <h4>98% First Inspection Pass Rate</h4>
+                    <p>Bond and exit cleans delivered to strict real estate standards, with a 98% pass rate on the first property inspection.</p>
                 </div>
                 <div class="benefit-item">
-                    <h4>Consistent Quality</h4>
-                    <p>Trained, uniformed cleaners with detailed checklists, delivering the same high standard on every job.</p>
+                    <h4>Completion Report Email</h4>
+                    <p>A full completion report is sent via email immediately after every job, so you and your clients have full visibility.</p>
                 </div>
                 <div class="benefit-item">
-                    <h4>Flexible Scheduling</h4>
-                    <p>Weekday and weekend availability, with key pickup and drop-off arrangements to suit your office workflow.</p>
+                    <h4>7-Day & Evening Availability</h4>
+                    <p>We work 7 days a week with evening appointment slots available to fit around tenant schedules and inspection deadlines.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Agent‑First Focus</h4>
+                    <p>We understand real estate workflows, with fast response times and clear communication for every job.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Consistent High Standard</h4>
+                    <p>Detailed cleaning checklists ensure predictable, high‑quality results on every property, every single time.</p>
                 </div>
                 <div class="benefit-item">
                     <h4>Fully Insured</h4>
-                    <p>Full public liability insurance for complete peace of mind across all residential and commercial sites.</p>
+                    <p>Full public liability insurance covering all residential and commercial cleaning work across Sydney.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact" class="contact-section">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-info">
                 <div class="contact-item">
-                    <span class="contact-label">Email:</span> <a href="mailto:tidyteddyau@gmail.com">tidyteddyau@gmail.com</a>
+                    📧 Email: <a href="mailto:tidyteddyau@gmail.com">tidyteddyau@gmail.com</a>
                 </div>
                 <div class="contact-item">
-                    <span class="contact-label">Phone:</span> <a href="tel:+61480800101">0480 800 101</a>
+                    📱 Phone: <a href="tel:+61480800101">0480 800 101</a>
                 </div>
                 <div class="contact-item">
-                    <span class="contact-label">Service Area:</span> Sydney Wide
+                    📍 Servicing all Sydney suburbs
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2026 Tidy Teddy Cleaning. All rights reserved.</p>
         </div>
     </footer>
-
 </body>
 </html>
