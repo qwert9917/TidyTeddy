@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tidy Teddy Cleaning | Sydney's Trusted Cleaning Partner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 20px 0;
+            border-bottom: 1px solid #f1f5f9;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(8px);
+            z-index: 10;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1f2937;
+        }
+
+        .logo span {
+            color: #73bff0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #73bff0;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 72px 0 64px;
+            text-align: center;
+            background: linear-gradient(180deg, #f0f8ff 0%, #ffffff 100%);
+        }
+
+        .hero h1 {
+            font-size: 44px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1f2937;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: #73bff0;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #64748b;
+            max-width: 640px;
+            margin: 0 auto 32px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: #73bff0;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: #5aa8d9;
+        }
+
+        /* Sections */
+        section {
+            padding: 64px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 48px;
+            color: #1f2937;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 32px 24px;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 10px 25px -5px rgba(115, 191, 240, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .service-card h3 {
+            font-size: 19px;
+            margin-bottom: 12px;
+            color: #1f2937;
+        }
+
+        .service-card p {
+            color: #64748b;
+            font-size: 15px;
+        }
+
+        /* Why Us */
+        .why-section {
+            background: #f8fafc;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
+        }
+
+        .benefit-item h4 {
+            font-size: 17px;
+            margin-bottom: 8px;
+            color: #1f2937;
+        }
+
+        .benefit-item p {
+            color: #64748b;
+            font-size: 15px;
+        }
+
+        /* Contact */
+        .contact-section {
+            text-align: center;
+        }
+
+        .contact-info {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 40px 32px;
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+            font-size: 17px;
+            color: #1f2937;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-item a {
+            color: #73bff0;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-label {
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            padding: 28px 0;
+            border-top: 1px solid #f1f5f9;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 48px 0 40px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .nav-links {
+                gap: 16px;
+                font-size: 14px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+            }
+
+            section {
+                padding: 48px 0;
+            }
+
+            .section-title {
+                font-size: 26px;
+                margin-bottom: 32px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .contact-info {
+                padding: 32px 20px;
+            }
+
+            .contact-item {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-wrapper">
+            <div class="logo">Tidy<span>Teddy</span></div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Tidy <span>Teddy</span> Cleaning</h1>
+            <p>Sydney's trusted cleaning partner for real estate agents, property managers and commercial partners. Reliable, on-time and professional results every time.</p>
+            <a href="#contact" class="btn">Get a Quote Today</a>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Bond Cleaning</h3>
+                    <p>Comprehensive end-of-lease cleaning designed to meet real estate standards and help your tenants get their full bond back.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Pre-Sale Cleaning</h3>
+                    <p>Premium property presentation cleaning to maximise appeal and value for vendors ahead of inspections and auctions.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Builder's Cleaning</h3>
+                    <p>Post-renovation and construction cleaning to remove dust, paint, debris and leave the property move-in ready.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Regular Cleaning</h3>
+                    <p>Flexible ongoing cleaning schedules for rental properties, offices and commercial spaces across Sydney.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section id="why-us" class="why-section">
+        <div class="container">
+            <h2 class="section-title">Why Partner With Us</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h4>Agent-Focused Service</h4>
+                    <p>We understand real estate timelines and priorities, with clear communication and fast turnaround for bookings.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Consistent Quality</h4>
+                    <p>Trained, uniformed cleaners with detailed checklists, delivering the same high standard on every job.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Flexible Scheduling</h4>
+                    <p>Weekday and weekend availability, with key pickup and drop-off arrangements to suit your office workflow.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Fully Insured</h4>
+                    <p>Full public liability insurance for complete peace of mind across all residential and commercial sites.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-label">Email:</span> <a href="mailto:tidyteddyau@gmail.com">tidyteddyau@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Phone:</span> <a href="tel:+61480800101">0480 800 101</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Service Area:</span> Sydney Wide
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Tidy Teddy Cleaning. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
